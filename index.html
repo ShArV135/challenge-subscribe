@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="calculator.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <h1>Challenge</h1>
+    <h2>Input your product list:</h2>
+    <table class="table" id="productsTable">
+        <thead>
+        <tr>
+            <th class="col-7">Title</th>
+            <th class="col-1">Amount</th>
+            <th class="col-1">Price</th>
+            <th class="col-1">No tax</th>
+            <th class="col-1">Imported</th>
+            <th class="col-1"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="text" class="form-control row-title"></td>
+            <td><input type="text" class="form-control row-amount"></td>
+            <td><input type="text" class="form-control row-price"></td>
+            <td class="align-middle text-center"><input type="checkbox" class="form-check-input row-notax"></td>
+            <td class="align-middle text-center"><input type="checkbox" class="form-check-input row-imported"></td>
+            <td>
+                <button class="btn btn-danger product-remove">Remove</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" id="addRow">Add row</button>
+    <button class="btn btn-success ml-1" id="submit">Submit</button>
+    <h2 class="mt-4">Output:</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table d-none" id="resultTable">
+                <thead>
+                <tr>
+                    <th class="col-8">Title</th>
+                    <th class="col-2">Amount</th>
+                    <th class="col-2">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="result-title"></td>
+                    <td class="result-amount"></td>
+                    <td class="result-price"></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="3">
+                        Sales Taxes:
+                        <b class="result-tax"></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Total:
+                        <b class="result-total"></b>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
